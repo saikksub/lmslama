@@ -2,7 +2,12 @@
   <div class="h-screen w-full">
     <div class="grid grid-cols-12 gap-3 h-full">
       <div class="col-span-6">
-        <slot />
+        <div class="flex items-center justify-center h-full">
+          <div class="w-full max-w-sm space-y-5">
+            <logo />
+            <slot />
+          </div>
+        </div>
       </div>
       <div class="relative col-span-6 bg-cover bg-center" style="background-image: url('/images/jeswin-thomas-mVLIOmH5w3U-unsplash.jpg')">
         <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30" />
