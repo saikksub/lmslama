@@ -2,35 +2,30 @@
   <NuxtLayout name="auth">
     <p class="text-2xl font-bold">Login</p>
     <div class="grid grid-cols-2 gap-3">
-      <div class="col-span-1">
-        <UButton size="xl" variant="outline" color="white" block>
+      <div class="col-span-2">
+        <UButton size="xl" color="white" block>
           <UIcon name="i-logos-google-icon" class="w-5 h-5" />
-        </UButton>
-      </div>
-
-      <div class="col-span-1">
-        <UButton size="xl" variant="outline" color="white" block>
-          <UIcon name="i-logos-apple" class="w-5 h-5 filter invert-0 dark:invert" />
+          Sign in with Google
         </UButton>
       </div>
     </div>
     <div class="h-3" />
-    <UDivider label="Or login with email and password" />
-    <UForm :schema="schema" :state="state" class="space-y-2" @submit="onSubmit">
+    <UDivider label="Or login with email and password" class="py-3" />
+    <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
       <UFormGroup label="Email" name="email">
-        <UInput v-model="state.email" variant="outline" color="gray" :ui="{}" size="xl" />
+        <UInput v-model="state.email" variant="outline" size="xl" placeholder="Enter your email" />
       </UFormGroup>
 
       <UFormGroup label="Password" name="password">
-        <UInput v-model="state.password" size="xl" variant="outline" color="gray" type="password" />
+        <UInput v-model="state.password" size="xl" variant="outline" type="password" placeholder="Enter your password" />
       </UFormGroup>
 
-      <UButton type="submit" size="xl" color="primary">
+      <UButton type="submit" size="xl" block color="primary">
         Continue
       </UButton>
     </UForm>
 
-    <UButton type="submit" size="xl" color="primary" variant="outline">
+    <UButton type="submit" size="xl" color="primary" variant="link" block>
       Don't have an account? Sign up
     </UButton>
   </NuxtLayout>
